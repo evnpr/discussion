@@ -1,1 +1,11 @@
 this is project of discussion
+
+language : 
+- python2.7
+
+framework : 
+- web.py 0.36
+
+need to install : 
+- easy_install web.py
+- easy_install jinja2
