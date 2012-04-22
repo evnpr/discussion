@@ -13,7 +13,7 @@ render = render_jinja(
 
 class hello:
   def GET(self):
-    halo = 'Hello world!'
+    halo = 'Hello world!!'
     return render.index(halo=halo)
 
 if __name__ == "__main__":
