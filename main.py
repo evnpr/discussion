@@ -1,8 +1,7 @@
 import web
 from web.contrib.template import render_jinja
-
-
-db = web.database(dbn='mysql', db='discussion', user='root', pw='abc123')
+from models import profile, database
+db = database.database()
 
 urls = (
             '/', 'hello'
@@ -16,9 +15,9 @@ render = render_jinja(
 
 class hello:
   def GET(self):
-    results = db.query("SELECT * FROM profile")
-    halo = results[0]
-    return render.index(halo=halo)
+    password = db.query("SELECT * FROM profile")[0]
+    halo = profile.getUser()
+    return render.index(halo=halo, password = password)
 
 if __name__ == "__main__":
   app.run()
