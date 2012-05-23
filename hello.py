@@ -1,8 +1,4 @@
-import web
-from web.contrib.template import render_jinja
-from models import profile, database 
 from main import *
-
 
 class hello:
   def GET(self):

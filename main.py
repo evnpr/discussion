@@ -1,14 +1,15 @@
-import web
-from web.contrib.template import render_jinja
-from models import profile, database
 from hello import *
 
-
 def index():
+    import web
+    from web.contrib.template import render_jinja
+    from models import profile, database
+
     db = database.database()
     urls = (
                 '/', 'hello'
                         )
+    
     render = render_jinja(
                   'templates',                 # Set template directory.
                    encoding = 'utf-8',         # Encoding.

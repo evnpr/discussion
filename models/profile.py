@@ -3,6 +3,7 @@ db = database()
 
 """
 definition:
+  id (int, primary_key, auto_int)
   user (varchar(30))
   password md5(varchar(30))
 """
